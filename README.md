@@ -32,13 +32,15 @@ or simply execute <b>run_docker.bat</b>
 
 <h3>Objectives:</h3>
 
-1. Create an endpoint to <b>get</b> the list of artists which user x listenned returning: 
+1. Create an endpoint to <b>get</b> the number of times user x listenned to artist y: 
     - <b>user_id</b>
-    - <b>list_artists_listenned</b>
+    - <b>Number of listens</b>
 
-2. Create an endpoint to **update** the list of artists which user x listenned returning:
+2. Create an endpoint to **update** the listens for artists y by user x:
     - <b>user_id</b>
-    - Update of <b>list_artists_listenned</b>
+    - Update of <b>Number of listens</b>
+    - Save Dataframe to csv tu use it back later
+
 3. Create an endpoint for each user to **get** recommandations such as:
     - Random artists 
     - Still unknown artists
