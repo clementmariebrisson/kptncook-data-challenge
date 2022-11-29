@@ -51,11 +51,25 @@ To see the doc:
 <h3>Recommendations based on similar artists</h3>
 
 To recommend similar artists to the ones already listenned, here are the steps:
-1. 5 already listenned artist are selected
+1. 5 already listenned artist are selected (<i>knwon artists</i>)
 2. <b>corrwith()</b> Pandas' function is used to find each 5 previous selected most similar artist, based on a correlation rank.
 
-corrwith() allows us to choose among 3 different correlation ranks : <b>pearson, kendall, spearman</b>.
+corrwith() allows us to choose among 3 different correlation ranks : <b>pearson, kendall, spearman</b>.<br>
+If no method is precised, corrwith uses Pearson coefficient which works as follows:
 
+
+|Pearson correlation coefficient value     | Strength   | 	Direction|
+|------------------------------------------|------------|-----------|
+|Greater than .5| 	Strong 	|Positive|
+|Between .3 and .5| 	Moderate 	|Positive|
+|Between 0 and .3| 	Weak 	|Positive|
+|0| 	None 	|None|
+|Between 0 and –.3| 	Weak 	|Negative|
+|Between –.3 and –.5| 	Moderate 	|Negative|
+|Less than –.5| 	Strong 	|Negative|
+
+In the results, mosts of recommendations are between 0 and .3. It shows a weak correlation, however not null.
+</br>After some tries with the other 2 ranking method, results appears to be sensitively the same.One hypothesis is that users of this dataset have not listened to enough music, which makes ranking coefficients less effective.
 
 <h3>Acknowledgments</h3>
 
@@ -63,3 +77,4 @@ corrwith() allows us to choose among 3 different correlation ranks : <b>pearson,
 * [Introduction to FastApi](https://www.datacamp.com/tutorial/introduction-fastapi-tutorial)
 * [FastAPI in Containers - Docker](https://fastapi.tiangolo.com/deployment/docker/)
 * [Recommendation engine using pandas](https://www.geeksforgeeks.org/building-recommendation-engines-using-pandas/)
+* [Pearson correlation coefficient](https://www.scribbr.com/statistics/pearson-correlation-coefficient/)
