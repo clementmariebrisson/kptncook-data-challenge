@@ -39,10 +39,10 @@ or simply execute <b>run_docker.bat</b>
 2. Create an endpoint to **update** the listens for artists y by user x:
     - <b>user_id</b>
     - Update of <b>Number of listens</b>
-    - Save Dataframe to csv tu use it back later
+    - Save dataset to csv tu use it back later
 
 3. Create an endpoint for each user to **get** recommandations such as:
-    - Random artists 
-    - Still unknown artists
-    - Artists that are similar to the ones already listened
+    - Random artists: taking a sample of 5 artists
+    - Still unknown artists: taking a sample of 5 never listenned artists  
+    - Artists that are similar to the ones already listenned
 
